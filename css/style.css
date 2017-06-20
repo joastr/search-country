@@ -131,7 +131,8 @@ p {
     color: #f7bc21; }
 
 li {
-  font-family: Lato, sans-serif; }
+  font-family: Lato, sans-serif;
+  margin-left: 4%; }
 
 footer {
   background-color: #a29a84;
@@ -160,9 +161,6 @@ footer {
     padding: 0 4%; }
     .text40 p {
       padding: 3% 3%; }
-
-  li {
-    margin-left: 4%; }
 
   li:last-of-type {
     padding-bottom: 20px; }
@@ -193,9 +191,6 @@ footer {
     padding: 0 4%; }
     .text40 p {
       padding: 3% 3%; }
-
-  li {
-    margin-left: 4%; }
 
   li:last-of-type {
     padding-bottom: 20px; }
@@ -231,9 +226,6 @@ footer {
     float: none;
     width: 100%; }
     .text50 p {
-      padding: 5% 10%; }
-
-  li {
-    margin-left: 4%; } }
+      padding: 5% 10%; } }
 
 /*# sourceMappingURL=style.css.map */
