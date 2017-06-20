@@ -1,0 +1,239 @@
+/* SASS Document */
+@import url("https://fonts.googleapis.com/css?family=Alegreya|Dynalight|Sarina|Alegreya+SC|Lato|Amarante|Yesteryear");
+/*GENERAL */
+* {
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  outline-style: none; }
+  *:hover, *:focus, *:visited, *.active, *.focus, *.visited {
+    outline-style: none;
+    outline: none; }
+
+.btn:active:focus, .btn:focus {
+  otuline-style: none;
+  outline: none;
+  outline-offset: 0; }
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+.row:after, row:before {
+  content: "";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2% 2% 4% 2%; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding-top: 2%;
+  text-align: left;
+  font-family: Alegreya SC, cursive; }
+
+p {
+  font-family: Lato, sans-serif; }
+
+/*HEADER */
+.main-img {
+  height: 40vh;
+  width: 100%;
+  background: url("../images/main-img.jpg") 0/cover; }
+
+/*MAIN */
+.text40 {
+  width: 40%;
+  float: left; }
+  .text40 h1 {
+    padding: 20px 0; }
+  .text40 p {
+    padding-right: 5%;
+    line-height: 1.7em;
+    padding-bottom: 3%; }
+
+.text60 {
+  width: 60%;
+  float: left;
+  background-color: #ddc177;
+  text-align: center; }
+  .text60 h3 {
+    padding: 10% 3% 0 3%;
+    text-align: center;
+    font-family: Sarina, cursive;
+    font-size: 2.1em; }
+
+.text50 {
+  width: 50%;
+  float: left;
+  text-align: center; }
+  .text50 p {
+    text-align: justify;
+    padding: 4% calc(100% - 310px);
+    font-size: 1em; }
+    .text50 p span {
+      font-weight: bold; }
+
+.globe, .brown-map {
+  background: url("../images/th-globe.jpg");
+  width: 300px;
+  height: 195px;
+  display: block;
+  margin: 10% auto; }
+  .globe:hover .layer, .brown-map:hover .layer {
+    display: block; }
+
+.brown-map {
+  background: url("../images/th-brown-map.jpg");
+  margin-bottom: 4%; }
+
+.gold-map {
+  background: url("../images/th-gold-map.jpg");
+  width: 300px;
+  height: 221px;
+  margin: 4% auto;
+  display: block; }
+  .gold-map:hover .layer {
+    display: block; }
+
+.compass {
+  text-align: center;
+  width: 280px;
+  height: auto;
+  margin-top: 5%; }
+
+.btn {
+  color: white;
+  background-color: #000;
+  border-radius: 0; }
+  .btn:hover, .btn:visited, .btn:focus {
+    color: #ddc177; }
+
+.layer {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+  .layer i {
+    margin-top: 27%;
+    font-size: 2.5em;
+    color: #f7bc21; }
+
+li {
+  font-family: Lato, sans-serif; }
+
+footer {
+  background-color: #a29a84;
+  text-align: center; }
+  footer p {
+    color: #dedace;
+    margin-bottom: 0;
+    padding: 5px; }
+
+/*@ MEDIA */
+@media (min-width: 1201px) {
+  .container {
+    width: 1200px; } }
+@media (max-width: 520px) {
+  .main-img {
+    background-position: 40% 50%; }
+
+  .text40, .text50, .text60 {
+    float: none;
+    width: 100%; }
+
+  h1 {
+    text-align: center; }
+
+  .text40 {
+    padding: 0 4%; }
+    .text40 p {
+      padding: 3% 3%; }
+
+  li {
+    margin-left: 4%; }
+
+  li:last-of-type {
+    padding-bottom: 20px; }
+
+  .container {
+    padding: 0; }
+
+  .text50 p {
+    padding: 4% 10%; } }
+@media (min-width: 521px) and (max-width: 660px) {
+  .main-img {
+    background-position: 40% 50%; }
+
+  .text40, .text60 {
+    float: none;
+    width: 100%; }
+
+  .text50, .text60 {
+    background-color: #ddc177; }
+
+  .text60 {
+    height: 150vh; }
+
+  h1 {
+    text-align: center; }
+
+  .text40 {
+    padding: 0 4%; }
+    .text40 p {
+      padding: 3% 3%; }
+
+  li {
+    margin-left: 4%; }
+
+  li:last-of-type {
+    padding-bottom: 20px; }
+
+  .globe, .brown-map {
+    width: 250px;
+    height: 164px; }
+
+  .gold-map {
+    width: 250px;
+    height: 184px; }
+
+  .compass {
+    width: 240px;
+    height: auto; }
+
+  .container {
+    padding: 0; }
+
+  .text50 p {
+    padding: 4% 10%; } }
+@media (min-width: 661px) and (max-width: 1200px) {
+  .main-img {
+    background-position: 40% 50%; }
+
+  .text60 {
+    width: 50%; }
+
+  .text40 {
+    width: 50%; }
+
+  .text50 {
+    float: none;
+    width: 100%; }
+    .text50 p {
+      padding: 5% 10%; }
+
+  li {
+    margin-left: 4%; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="wyszukiwarka krajów, stolica, kraj, powierzchnia kraju">
+    <meta name="description" content="wyszukiwarka krajów">
+    <title>Wyszukiwarka krajów</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+    <meta property="og:url"           content="http://www.joast.pl/countries/index.html"/>
+  	<meta property="og:type"          content="website" />
+  	<meta property="og:title"         content="Wyszukiwarka krajów" />
+  	<meta property="og:description"   content="Nie znasz stolicy danego kraju? Chcesz poznać jego dane geograficzne? Zapraszam do wyszukiwarki." />
+ 	<meta property="og:image"         content="images/th-saddle.jpg" />
+  </head>
+  <body>
+  	<header>
+    	<div class="main-img">
+        </div>
+    </header>
+    <main>
+  		<div class="container">
+			<div class="text40">        
+  				<h1>Wyszukiwarka krajów</h1>
+                <p>Wyszukiwarka krajów jest aplikacją wyszukującą dane geopolityczne na temat różnych państw. Dzięki niej możemy sprawdzić jaki obszar zajmuje dane państwo, jaka jest jego stolica, język, waluta oraz kraje graniczące, a także jaka jest jego nazwa w języku ojczystym. Po prawej stronie natomiast zamieściłam zdjęcia oraz ciekawostki z dziedziny kartografii. Co prawda niektóre urządzenia "trącą myszką", ale czy nie można spróbować cofnąć się w czasie, puścić wodze wyobraźni  i jak dawni podróżnicy przemierzać przestrzenie ….</p>
+                <p>Aplikacja została wykonana m.in. z użyciem jQuery,  Ajax i RESTful API. Dzięki API (interfejsowi programistycznemu aplikacji) udostępnionemu na stronie www https://restcountries.eu/ możemy korzystać z dużej bazy danych dotyczących różnych państw. Ze względu na fakt iż nie jest to polska baza danych proszę o wpisywanie nazw krajów w języku angielskim.</p>
+				<button class="btn" id="search">Szukaj kraju</button>
+				<input id="country-name" type="text" />
+                <br/>
+                <br/>
+				<h2>Lista krajów</h2>
+                <br/>
+				<ul id="countries">
+  					<li>Brak danych</li>
+				</ul>
+            </div>
+            <div class="text60">
+            	<div class="text50">
+                	<h3>Kartografia kiedyś i dziś ...</h3>
+                    <div class="globe">
+                    	<a href="images/lg-globe.jpg" class="image-popup-vertical-fit">
+                        	<div class="layer">
+                            	<i class="fa fa-search-plus" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="brown-map">
+                    	<a href="images/lg-brown-map.jpg" class="image-popup-vertical-fit">
+                        	<div class="layer">
+                            	<i class="fa fa-search-plus" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <p>Jak prosto zmierzyć odległość na mapie? - najprostszy sposób to przyłożenie cienkiego sznurka do mierzonej trasy, aby po rozprostowaniu przyłożyć go do podziałki liniowej i odczytać odległość ze skali albo zmierzyć go linijką i przeliczyć odległość na metry.</p>
+                </div>
+                <div class="text50">
+                	<div class="gold-map">
+                    	<a href="images/lg-gold-map.jpg" class="image-popup-vertical-fit">
+                        	<div class="layer">
+                            	<i class="fa fa-search-plus" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <p>Na zdjęciu zegar słoneczny <span>Petera Dollonda</span> (żyjący w XVIII wieku w Anglii wynalazca i konstruktor przyrządów optycznych) tzw. zegar słoneczny inklinacyjny. Przyrządy tego rodzaju używane były powszechnie przez podróżników i żeglarzy, były bowiem w stanie wskazać im czas niezależnie od miejsca, w którym się znajdowali.</p>
+                    <img class="compass" src="images/th-compass.png">
+                </div>
+            </div>
+    	</div>
+    </main>
+    <footer>
+    	<p>2017 &nbsp; joast.pl &nbsp; All rights reserved</p>
+    </footer>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>
