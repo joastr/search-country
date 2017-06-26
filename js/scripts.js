@@ -31,11 +31,12 @@ function showCountriesList(resp) {
 		 $('<li>').text('waluta: ' + item.currencies[0].name +' (' + item.currencies[0].symbol + ')').appendTo(countriesList);
 		 $('<li>').text('język: ' + item.languages[0].name).appendTo(countriesList);
 		 $('<li>').text('powierzchnia: ' +  item.area +  ' km 2').appendTo(countriesList);
-		 $('<li>').text('kraje graniczące: ' + item.borders).appendTo(countriesList);
-	
 		 if (!item.borders.length) {
-			 countryBorders = 'brak';
-		 }
+			 $('<li>').text('kraje graniczące: brak').appendTo(countriesList);
+			 }
+			 else{
+			 $('<li>').text('kraje graniczące: ' + item.borders).appendTo(countriesList);
+			 }
 		/*var alpha3Code = item.alpha3Code;
    		var alpha3CodeLow = alpha3Code.toLowerCase();
    		console.log(alpha3CodeLow);
