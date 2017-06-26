@@ -4,7 +4,7 @@
 
 //wyszukiwarka
 
-var url = 'https://restcountries.eu/rest/v1/name/',
+var url = 'https://restcountries.eu/rest/v2/name/',
 	countriesList = $('#countries');
 
 $('#search').click(searchCountries);
@@ -28,10 +28,14 @@ function showCountriesList(resp) {
    		 $('<li>').text('nazwa kraju w języku ojczystym: ' + item.nativeName).appendTo(countriesList);
 		 $('<li>').text('stolica: ' + item.capital).appendTo(countriesList);
 		 $('<li>').text('region: ' + item.region).appendTo(countriesList);
-		 $('<li>').text('waluta: ' + item.currencies +' (' + item.currencies[0].symbol + ')').appendTo(countriesList);
-		 $('<li>').text('język: ' + item.languages).appendTo(countriesList);
+		 $('<li>').text('waluta: ' + item.currencies[0].name +' (' + item.currencies[0].symbol + ')').appendTo(countriesList);
+		 $('<li>').text('język: ' + item.languages[0].name).appendTo(countriesList);
 		 $('<li>').text('powierzchnia: ' +  item.area +  ' km 2').appendTo(countriesList);
 		 $('<li>').text('kraje graniczące: ' + item.borders).appendTo(countriesList);
+	
+		 if (!item.borders.length) {
+			 countryBorders = 'brak';
+		 }
 		/*var alpha3Code = item.alpha3Code;
    		var alpha3CodeLow = alpha3Code.toLowerCase();
    		console.log(alpha3CodeLow);
