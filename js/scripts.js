@@ -6,7 +6,7 @@
 
 
 
-const url = 'https://restcountries.eu/rest/v1/name/',
+const url = 'https://restcountries.eu/rest/v2/name/',
 	countriesList = $('#countries');
 
 
@@ -52,11 +52,9 @@ function showCountriesList(resp) {
 		 $('<li>').text('waluta: ' + item.currencies[0].name +' (' + item.currencies[0].symbol + ')').appendTo(countriesList);
 		 $('<li>').text('język: ' + item.languages[0].name).appendTo(countriesList);
 		 $('<li>').html('powierzchnia:  '+  item.area +  ' km' +'&sup2').appendTo(countriesList);
-		 var borders = item.borders;
-		
-		 var searchAndReplace = (function(){ 
 		 
-		 var isoCountries = {
+		 
+		 const isoCountries = {
 			'ABW':'Aruba',
 			'AFG':'Afghanistan',
 			'AGO':'Angola',
@@ -308,31 +306,20 @@ function showCountriesList(resp) {
 			'ZWE':'Zimbabwe'
 			};
 			
-			
-		
-		
-			$borders.text(function(index,abbrCode) {
-				for (var abbrTable in isoCountries)
-				{
-					if(abbrCode.indexOf(abbrTable)>-1)
-					{
-						return abbrCode.replace(abbrTable, isoCountries[abbrTable]);
-					}
-				}
+			const borders = item.borders.reduce((result, item) => {
+				if (isoCountries.hasOwnProperty(item))
+					result.push(isoCountries[item]);
+
+				return result;
+			}, []).join(', ');
 				
-			return abbrCode;
-			});
-		 }); 
-		
-		
-		
 		
 
 		 if (!borders.length) {
 			 $('<li>').text('kraje graniczące: brak').appendTo(countriesList);
 			 }
 			 else{
-			 $('<li>').text('kraje graniczące: ' + searchAndReplace).appendTo(countriesList);
+			 $('<li>').text('kraje graniczące: ' + borders).appendTo(countriesList);
 			 }
 			 		
 	});
