@@ -11,7 +11,7 @@
     outline: none; }
 
 .btn:active:focus, .btn:focus {
-  otuline-style: none;
+  outline-style: none;
   outline: none;
   outline-offset: 0; }
 
